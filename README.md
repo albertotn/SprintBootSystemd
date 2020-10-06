@@ -22,8 +22,8 @@ I've tested this setup on Centos 7 ( on an aws ec2 machine ) and works fine for 
 	SuccessExitStatus=143
 	TimeoutStopSec=10
 
-	StandardOutput=journal
-	StandardError=journal
+	StandardOutput=file:/tmp/service-output.log
+	StandardError=file:/tmp/service-error.log
 
 	Restart=on-failure
 	RestartSec=5s

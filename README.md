@@ -10,18 +10,20 @@ I've tested this setup on Centos 7 ( on an aws ec2 machine ) and works fine for 
 
 
 	[Unit]
-
+	# General information
 	Description=your description
 	After=network.target
 
 	[Service]
 	WorkingDirectory=/yourdir
-
+	# Spring boot starting command
 	ExecStart=/bin/java -jar yourjar.jar
-
+	
+	# Send an exit code
 	SuccessExitStatus=143
 	TimeoutStopSec=10
 
+	# Location for logging files
 	StandardOutput=file:/var/log/service-output.log
 	StandardError=file:/var/log/service-error.log
 

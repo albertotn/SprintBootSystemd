@@ -18,6 +18,8 @@ I've tested this setup on Centos 7 ( on an aws ec2 machine ) and works fine for 
 	WorkingDirectory=/yourdir
 	# Spring boot starting command
 	ExecStart=/bin/java -jar yourjar.jar
+	# Path of file containing the env vars used by application
+	EnvironmentFile=/path/to/.env
 	
 	# Send an exit code
 	SuccessExitStatus=143
